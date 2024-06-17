@@ -143,7 +143,11 @@ const obtenerPuntosCarta = (numeroCarta: number): number =>
   numeroCarta > 7 ? 0.5 : numeroCarta;
 
 // Función para sumar los puntos actuales con los nuevos puntos
-const sumarPuntos = (puntos: number): number => puntuacion + puntos;
+const sumarPuntos = (puntos: number): number => {
+  let resultado = puntuacion + puntos;
+  let resultadoFinal = mensajeDiv.textContent = resultado.toString();
+  return parseFloat(resultadoFinal);
+}
 
 // Función para actualizar los puntos y mostrar la puntuación en el DOM
 const actualizarPuntos = (puntosNuevos: number) => {
